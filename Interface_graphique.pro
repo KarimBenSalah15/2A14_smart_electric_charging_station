@@ -1,4 +1,8 @@
+
+QT       +=  core gui sql serialport network multimedia multimediawidgets charts printsupport widgets axcontainer
+QT       += core gui multimedia multimediawidgets
 QT       += core gui sql
+QT       += serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,15 +20,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Arduino.cpp \
     Connexion.cpp \
     fournisseur.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    smtp.cpp
 
 HEADERS += \
+    Arduino.h \
     Connexion.h \
     fournisseur.h \
-    mainwindow.h
+    mainwindow.h \
+    smtp.h
 
 FORMS += \
     mainwindow.ui

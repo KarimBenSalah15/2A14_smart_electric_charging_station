@@ -24,6 +24,9 @@ public:
     QSqlQueryModel* afficher();
     bool supprimer(int);
     bool modifier();
+    QSqlQueryModel * rechercher(QString);
+    QSqlQueryModel * trier(QString );
+    QSqlQueryModel * afficher_his();
 private:
     int id;
     QString type;
